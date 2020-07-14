@@ -1,0 +1,50 @@
+.zhuti1{
+	font-size: 30px;
+}
+
+$default-theme:(
+    base-color:#ddd,
+    border-color:#000,
+);
+$pink-theme:(
+    base-color:lightpink,
+    border-color:lightpink
+);
+
+$themes:(
+    default-theme:$default-theme,
+    pink-theme:$pink-theme
+);
+
+
+
+@mixin base-background(){ 
+    @each $themename , $theme in $themes {
+        [data-theme = '#{$themename}'] & {
+            background: map-get($map: $theme, $key: base-color )
+        }
+    }
+};
+
+
+$color-primary:#fa436a;
+$color-primary-green:green;
+$color-primary-blue:blue;
+
+
+@mixin color_primary($color) {
+    color:$color;
+    [data-theme="green"] &{
+        color:$color-primary-green;
+    } 
+    
+    [data-theme="blue"] &{
+        color:$color-primary-blue;
+    } 
+}
+
+
+
+
+
+
