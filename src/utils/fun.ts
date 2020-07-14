@@ -2,7 +2,7 @@
  * @Autor: zwl
  * @Date: 2020-07-08 17:01:22
  * @LastEditors: zwl
- * @LastEditTime: 2020-07-11 17:57:01
+ * @LastEditTime: 2020-07-14 17:51:11
  */
 export const _Debounce = (fn: any, t: number): Function => {
   const delay = t || 500
@@ -64,7 +64,7 @@ export const _HandleSimplePage = (arr: any, currentPage: any, limit: any) => {
 }
 
 export const settings = {
-  imgBaseUrl: 'https://website.bjike.com/api/attach/pub/img/'
+  imgBaseUrl: 'https://xxx/api/attach/pub/img/'
 }
 
 export const _ToLine = (name: any) => {
